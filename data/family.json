@@ -1,0 +1,2986 @@
+{
+  "schemaVersion": 1,
+  "title": "葉氏家族族譜",
+  "ancestralHome": "福建漳州府海澄縣",
+  "source": {
+    "file": "【葉氏祖籍：漳州府海澄縣】.pdf",
+    "pages": 2,
+    "sha256": "8d267c6e291a40de00032a9899393522c10ec4d8a3b2c566828aa180ecf532e5",
+    "method": "兩頁全文擷取與逐頁版面人工核對；非依姓名或橫向位置推測親屬。"
+  },
+  "branches": [
+    {
+      "id": "B01",
+      "name": "葉公名妻支系",
+      "rootIds": [
+        "P0001"
+      ],
+      "description": "原文第十六世起之記載"
+    },
+    {
+      "id": "B02",
+      "name": "葉海蝦支系",
+      "rootIds": [
+        "P0045",
+        "P0046"
+      ],
+      "description": "原文註記「第三房」；父輩待考證"
+    }
+  ],
+  "people": [
+    {
+      "id": "P0001",
+      "name": "葉公名妻",
+      "aliases": [],
+      "generation": 16,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [],
+      "spouseIds": [
+        "P0002"
+      ],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉公名妻"
+      },
+      "reviewNotes": "「葉公名妻」照錄原文；姓名用字及「名妻」意義待家族核對。"
+    },
+    {
+      "id": "P0002",
+      "name": "葉媽名慈淑",
+      "aliases": [],
+      "generation": null,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [],
+      "spouseIds": [
+        "P0001"
+      ],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "unknown",
+      "source": {
+        "page": 1,
+        "label": "葉媽名慈淑"
+      }
+    },
+    {
+      "id": "P0003",
+      "name": "葉俊清",
+      "aliases": [],
+      "generation": 17,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0001"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉俊清"
+      }
+    },
+    {
+      "id": "P0004",
+      "name": "葉石城",
+      "aliases": [],
+      "generation": 18,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0003"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉石城"
+      }
+    },
+    {
+      "id": "P0005",
+      "name": "葉阿每",
+      "aliases": [
+        "葉阿送"
+      ],
+      "generation": 19,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0004"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "(葉阿送)",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉阿每(葉阿送)"
+      }
+    },
+    {
+      "id": "P0006",
+      "name": "葉阿有",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0005"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉阿有"
+      }
+    },
+    {
+      "id": "P0007",
+      "name": "葉春交",
+      "aliases": [],
+      "generation": 17,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0001"
+      ],
+      "spouseIds": [
+        "P0008"
+      ],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉春交"
+      }
+    },
+    {
+      "id": "P0008",
+      "name": "陳玉娘",
+      "aliases": [],
+      "generation": null,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [],
+      "spouseIds": [
+        "P0007"
+      ],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "unknown",
+      "source": {
+        "page": 1,
+        "label": "陳玉娘"
+      }
+    },
+    {
+      "id": "P0009",
+      "name": "葉石南",
+      "aliases": [],
+      "generation": 18,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0007"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉石南"
+      }
+    },
+    {
+      "id": "P0010",
+      "name": "葉樹生",
+      "aliases": [],
+      "generation": 19,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0009"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉樹生"
+      }
+    },
+    {
+      "id": "P0011",
+      "name": "葉有財",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0010"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉有財"
+      }
+    },
+    {
+      "id": "P0012",
+      "name": "葉文章",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0010"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉文章"
+      }
+    },
+    {
+      "id": "P0013",
+      "name": "葉文得",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0010"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉文得"
+      }
+    },
+    {
+      "id": "P0014",
+      "name": "葉樹筍",
+      "aliases": [],
+      "generation": 19,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0009"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉樹筍"
+      }
+    },
+    {
+      "id": "P0015",
+      "name": "葉有全",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0014"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉有全"
+      }
+    },
+    {
+      "id": "P0016",
+      "name": "葉有順",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0014"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉有順"
+      }
+    },
+    {
+      "id": "P0017",
+      "name": "葉芳雄",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0014"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉芳雄"
+      }
+    },
+    {
+      "id": "P0018",
+      "name": "葉樹",
+      "aliases": [],
+      "generation": 19,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0009"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉樹"
+      }
+    },
+    {
+      "id": "P0019",
+      "name": "葉慶雲",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0018"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉慶雲"
+      }
+    },
+    {
+      "id": "P0020",
+      "name": "葉慶富",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0018"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉慶富"
+      }
+    },
+    {
+      "id": "P0021",
+      "name": "葉啟男",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0018"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉啟男"
+      }
+    },
+    {
+      "id": "P0022",
+      "name": "葉石枝",
+      "aliases": [],
+      "generation": 18,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0007"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉石枝"
+      }
+    },
+    {
+      "id": "P0023",
+      "name": "葉樹菜",
+      "aliases": [],
+      "generation": 19,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0022"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "(未見續記)",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉樹菜(未見續記)"
+      }
+    },
+    {
+      "id": "P0024",
+      "name": "葉秋榮",
+      "aliases": [],
+      "generation": 19,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0022"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉秋榮"
+      }
+    },
+    {
+      "id": "P0025",
+      "name": "葉臥丁",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0024"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉臥丁"
+      }
+    },
+    {
+      "id": "P0026",
+      "name": "葉舜",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0024"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉舜"
+      }
+    },
+    {
+      "id": "P0027",
+      "name": "葉樹碧",
+      "aliases": [],
+      "generation": 19,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0022"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉樹碧"
+      }
+    },
+    {
+      "id": "P0028",
+      "name": "葉水炎",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0027"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉水炎"
+      }
+    },
+    {
+      "id": "P0029",
+      "name": "葉臥丙",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0027"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉臥丙"
+      }
+    },
+    {
+      "id": "P0030",
+      "name": "葉臥成",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0027"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉臥成"
+      }
+    },
+    {
+      "id": "P0031",
+      "name": "葉阿賜",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0027"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉阿賜"
+      }
+    },
+    {
+      "id": "P0032",
+      "name": "葉梓福",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0027"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "姓名於 PDF 跨行：葉梓／福。",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉梓福姓名於 PDF 跨行：葉梓／福。"
+      }
+    },
+    {
+      "id": "P0033",
+      "name": "葉賢能",
+      "aliases": [],
+      "generation": 18,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0007"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉賢能"
+      }
+    },
+    {
+      "id": "P0034",
+      "name": "葉國芳",
+      "aliases": [],
+      "generation": 19,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0033"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "(傳女)",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉國芳(傳女)"
+      },
+      "reviewNotes": "「傳女」意義待考證；保留原註，不逕行解讀為性別、收養或婚姻。"
+    },
+    {
+      "id": "P0035",
+      "name": "葉玉極",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0034"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉玉極"
+      }
+    },
+    {
+      "id": "P0036",
+      "name": "葉含笑",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0034"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉含笑"
+      }
+    },
+    {
+      "id": "P0037",
+      "name": "葉國源",
+      "aliases": [],
+      "generation": 19,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0033"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉國源"
+      }
+    },
+    {
+      "id": "P0038",
+      "name": "葉文平",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0037"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉文平"
+      }
+    },
+    {
+      "id": "P0039",
+      "name": "葉阿德",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0037"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉阿德"
+      }
+    },
+    {
+      "id": "P0040",
+      "name": "葉水金",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0037"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉水金"
+      }
+    },
+    {
+      "id": "P0041",
+      "name": "葉石泉",
+      "aliases": [],
+      "generation": 18,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0007"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "(未見續記)",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉石泉(未見續記)"
+      }
+    },
+    {
+      "id": "P0042",
+      "name": "葉石水",
+      "aliases": [],
+      "generation": 18,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0007"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉石水"
+      }
+    },
+    {
+      "id": "P0043",
+      "name": "葉國裕",
+      "aliases": [],
+      "generation": 19,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0042"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "(傳女)",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉國裕(傳女)"
+      },
+      "reviewNotes": "「傳女」意義待考證；保留原註，不逕行解讀為性別、收養或婚姻。"
+    },
+    {
+      "id": "P0044",
+      "name": "葉秀美",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0043"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B01",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉秀美"
+      }
+    },
+    {
+      "id": "P0045",
+      "name": "葉海蝦之父輩",
+      "aliases": [],
+      "generation": 16,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "[第十六世推測]；原文非具名人物，僅為父輩推測記載。",
+      "gender": null,
+      "branchId": "B02",
+      "recordType": "ancestor-note",
+      "generationStatus": "inferred",
+      "source": {
+        "page": 1,
+        "label": "葉海蝦之父輩[第十六世推測]；原文非具名人物，僅為父輩推測記載。"
+      },
+      "reviewNotes": "父輩不是已確認的父親；不納入確定的親子連線，亦不與另一支系連接。"
+    },
+    {
+      "id": "P0046",
+      "name": "葉海蝦",
+      "aliases": [],
+      "generation": 17,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "(第三房)",
+      "gender": null,
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉海蝦(第三房)"
+      }
+    },
+    {
+      "id": "P0047",
+      "name": "葉條枝",
+      "aliases": [],
+      "generation": 18,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0046"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "(未見續記)",
+      "gender": null,
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉條枝(未見續記)"
+      }
+    },
+    {
+      "id": "P0048",
+      "name": "葉阿旺",
+      "aliases": [],
+      "generation": 18,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0046"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "(未見續記)",
+      "gender": null,
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉阿旺(未見續記)"
+      }
+    },
+    {
+      "id": "P0049",
+      "name": "葉旺條",
+      "aliases": [],
+      "generation": 18,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0046"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉旺條"
+      }
+    },
+    {
+      "id": "P0050",
+      "name": "葉俊良",
+      "aliases": [
+        "忠雄"
+      ],
+      "generation": 19,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0049"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "（忠雄 ）",
+      "gender": null,
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉俊良（忠雄 ）"
+      }
+    },
+    {
+      "id": "P0051",
+      "name": "葉作榮",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0050"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉作榮"
+      }
+    },
+    {
+      "id": "P0052",
+      "name": "葉宗頷",
+      "aliases": [],
+      "generation": 21,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0051"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉宗頷"
+      }
+    },
+    {
+      "id": "P0053",
+      "name": "葉峻宏",
+      "aliases": [
+        "崑利"
+      ],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0050"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "（崑利）",
+      "gender": null,
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉峻宏（崑利）"
+      }
+    },
+    {
+      "id": "P0054",
+      "name": "葉宣亨",
+      "aliases": [],
+      "generation": 21,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0053"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉宣亨"
+      }
+    },
+    {
+      "id": "P0055",
+      "name": "葉姿昀",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0050"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "(女)；原文姓名前有「、」。",
+      "gender": "female",
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉姿昀(女)；原文姓名前有「、」。"
+      }
+    },
+    {
+      "id": "P0056",
+      "name": "葉進益",
+      "aliases": [],
+      "generation": 19,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0049"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉進益"
+      }
+    },
+    {
+      "id": "P0057",
+      "name": "葉惠真",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0056"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "(女)",
+      "gender": "female",
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉惠真(女)"
+      }
+    },
+    {
+      "id": "P0058",
+      "name": "葉青林",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0056"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉青林"
+      }
+    },
+    {
+      "id": "P0059",
+      "name": "葉秋瓶",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0056"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "(女)",
+      "gender": "female",
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉秋瓶(女)"
+      }
+    },
+    {
+      "id": "P0060",
+      "name": "葉秋梅",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0056"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "(女)；女字註記於下一行。",
+      "gender": "female",
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉秋梅(女)；女字註記於下一行。"
+      }
+    },
+    {
+      "id": "P0061",
+      "name": "葉進來",
+      "aliases": [],
+      "generation": 19,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0049"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "子女記載延續至第 2 頁。",
+      "gender": null,
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉進來子女記載延續至第 2 頁。"
+      }
+    },
+    {
+      "id": "P0062",
+      "name": "葉怡寧",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0061"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "(女)",
+      "gender": "female",
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 1,
+        "label": "葉怡寧(女)"
+      }
+    },
+    {
+      "id": "P0063",
+      "name": "葉家華",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0061"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 2,
+        "label": "葉家華"
+      }
+    },
+    {
+      "id": "P0064",
+      "name": "葉豫澤",
+      "aliases": [],
+      "generation": 21,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0063"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 2,
+        "label": "葉豫澤"
+      }
+    },
+    {
+      "id": "P0065",
+      "name": "葉羽婕",
+      "aliases": [],
+      "generation": 21,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0063"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "(女)",
+      "gender": "female",
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 2,
+        "label": "葉羽婕(女)"
+      }
+    },
+    {
+      "id": "P0066",
+      "name": "葉駿緯",
+      "aliases": [],
+      "generation": 20,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0061"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 2,
+        "label": "葉駿緯"
+      }
+    },
+    {
+      "id": "P0067",
+      "name": "葉博凱",
+      "aliases": [],
+      "generation": 21,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0066"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 2,
+        "label": "葉博凱"
+      }
+    },
+    {
+      "id": "P0068",
+      "name": "葉宸宇",
+      "aliases": [],
+      "generation": 21,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0066"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "",
+      "gender": null,
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 2,
+        "label": "葉宸宇"
+      }
+    },
+    {
+      "id": "P0069",
+      "name": "葉進生",
+      "aliases": [],
+      "generation": 19,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0049"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "─ [第二十世] (未見續記)",
+      "gender": null,
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 2,
+        "label": "葉進生─ [第二十世] (未見續記)"
+      }
+    },
+    {
+      "id": "P0070",
+      "name": "葉守",
+      "aliases": [],
+      "generation": 19,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0049"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "(女)",
+      "gender": "female",
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 2,
+        "label": "葉守(女)"
+      }
+    },
+    {
+      "id": "P0071",
+      "name": "葉阿香",
+      "aliases": [],
+      "generation": 19,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0049"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "(女)",
+      "gender": "female",
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 2,
+        "label": "葉阿香(女)"
+      }
+    },
+    {
+      "id": "P0072",
+      "name": "葉阿蜜",
+      "aliases": [],
+      "generation": 19,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0049"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "(女)",
+      "gender": "female",
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 2,
+        "label": "葉阿蜜(女)"
+      }
+    },
+    {
+      "id": "P0073",
+      "name": "葉彩雲",
+      "aliases": [],
+      "generation": 19,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0049"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "(女)",
+      "gender": "female",
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 2,
+        "label": "葉彩雲(女)"
+      }
+    },
+    {
+      "id": "P0074",
+      "name": "葉惠美",
+      "aliases": [],
+      "generation": 19,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0049"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "(女)",
+      "gender": "female",
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 2,
+        "label": "葉惠美(女)"
+      }
+    },
+    {
+      "id": "P0075",
+      "name": "葉門桂",
+      "aliases": [],
+      "generation": 19,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [
+        "P0049"
+      ],
+      "spouseIds": [],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "(女)",
+      "gender": "female",
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "explicit",
+      "source": {
+        "page": 2,
+        "label": "葉門桂(女)"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "R-P0001-P0003",
+      "type": "parent-child",
+      "fromId": "P0001",
+      "toId": "P0003",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0003-P0004",
+      "type": "parent-child",
+      "fromId": "P0003",
+      "toId": "P0004",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0004-P0005",
+      "type": "parent-child",
+      "fromId": "P0004",
+      "toId": "P0005",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0005-P0006",
+      "type": "parent-child",
+      "fromId": "P0005",
+      "toId": "P0006",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0001-P0007",
+      "type": "parent-child",
+      "fromId": "P0001",
+      "toId": "P0007",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0007-P0009",
+      "type": "parent-child",
+      "fromId": "P0007",
+      "toId": "P0009",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0009-P0010",
+      "type": "parent-child",
+      "fromId": "P0009",
+      "toId": "P0010",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0010-P0011",
+      "type": "parent-child",
+      "fromId": "P0010",
+      "toId": "P0011",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0010-P0012",
+      "type": "parent-child",
+      "fromId": "P0010",
+      "toId": "P0012",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0010-P0013",
+      "type": "parent-child",
+      "fromId": "P0010",
+      "toId": "P0013",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0009-P0014",
+      "type": "parent-child",
+      "fromId": "P0009",
+      "toId": "P0014",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0014-P0015",
+      "type": "parent-child",
+      "fromId": "P0014",
+      "toId": "P0015",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0014-P0016",
+      "type": "parent-child",
+      "fromId": "P0014",
+      "toId": "P0016",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0014-P0017",
+      "type": "parent-child",
+      "fromId": "P0014",
+      "toId": "P0017",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0009-P0018",
+      "type": "parent-child",
+      "fromId": "P0009",
+      "toId": "P0018",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0018-P0019",
+      "type": "parent-child",
+      "fromId": "P0018",
+      "toId": "P0019",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0018-P0020",
+      "type": "parent-child",
+      "fromId": "P0018",
+      "toId": "P0020",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0018-P0021",
+      "type": "parent-child",
+      "fromId": "P0018",
+      "toId": "P0021",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0007-P0022",
+      "type": "parent-child",
+      "fromId": "P0007",
+      "toId": "P0022",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0022-P0023",
+      "type": "parent-child",
+      "fromId": "P0022",
+      "toId": "P0023",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0022-P0024",
+      "type": "parent-child",
+      "fromId": "P0022",
+      "toId": "P0024",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0024-P0025",
+      "type": "parent-child",
+      "fromId": "P0024",
+      "toId": "P0025",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0024-P0026",
+      "type": "parent-child",
+      "fromId": "P0024",
+      "toId": "P0026",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0022-P0027",
+      "type": "parent-child",
+      "fromId": "P0022",
+      "toId": "P0027",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0027-P0028",
+      "type": "parent-child",
+      "fromId": "P0027",
+      "toId": "P0028",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0027-P0029",
+      "type": "parent-child",
+      "fromId": "P0027",
+      "toId": "P0029",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0027-P0030",
+      "type": "parent-child",
+      "fromId": "P0027",
+      "toId": "P0030",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0027-P0031",
+      "type": "parent-child",
+      "fromId": "P0027",
+      "toId": "P0031",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0027-P0032",
+      "type": "parent-child",
+      "fromId": "P0027",
+      "toId": "P0032",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0007-P0033",
+      "type": "parent-child",
+      "fromId": "P0007",
+      "toId": "P0033",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0033-P0034",
+      "type": "parent-child",
+      "fromId": "P0033",
+      "toId": "P0034",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0034-P0035",
+      "type": "parent-child",
+      "fromId": "P0034",
+      "toId": "P0035",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0034-P0036",
+      "type": "parent-child",
+      "fromId": "P0034",
+      "toId": "P0036",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0033-P0037",
+      "type": "parent-child",
+      "fromId": "P0033",
+      "toId": "P0037",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0037-P0038",
+      "type": "parent-child",
+      "fromId": "P0037",
+      "toId": "P0038",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0037-P0039",
+      "type": "parent-child",
+      "fromId": "P0037",
+      "toId": "P0039",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0037-P0040",
+      "type": "parent-child",
+      "fromId": "P0037",
+      "toId": "P0040",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0007-P0041",
+      "type": "parent-child",
+      "fromId": "P0007",
+      "toId": "P0041",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0007-P0042",
+      "type": "parent-child",
+      "fromId": "P0007",
+      "toId": "P0042",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0042-P0043",
+      "type": "parent-child",
+      "fromId": "P0042",
+      "toId": "P0043",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0043-P0044",
+      "type": "parent-child",
+      "fromId": "P0043",
+      "toId": "P0044",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0046-P0047",
+      "type": "parent-child",
+      "fromId": "P0046",
+      "toId": "P0047",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0046-P0048",
+      "type": "parent-child",
+      "fromId": "P0046",
+      "toId": "P0048",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0046-P0049",
+      "type": "parent-child",
+      "fromId": "P0046",
+      "toId": "P0049",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0049-P0050",
+      "type": "parent-child",
+      "fromId": "P0049",
+      "toId": "P0050",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0050-P0051",
+      "type": "parent-child",
+      "fromId": "P0050",
+      "toId": "P0051",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0051-P0052",
+      "type": "parent-child",
+      "fromId": "P0051",
+      "toId": "P0052",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0050-P0053",
+      "type": "parent-child",
+      "fromId": "P0050",
+      "toId": "P0053",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0053-P0054",
+      "type": "parent-child",
+      "fromId": "P0053",
+      "toId": "P0054",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0050-P0055",
+      "type": "parent-child",
+      "fromId": "P0050",
+      "toId": "P0055",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0049-P0056",
+      "type": "parent-child",
+      "fromId": "P0049",
+      "toId": "P0056",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0056-P0057",
+      "type": "parent-child",
+      "fromId": "P0056",
+      "toId": "P0057",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0056-P0058",
+      "type": "parent-child",
+      "fromId": "P0056",
+      "toId": "P0058",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0056-P0059",
+      "type": "parent-child",
+      "fromId": "P0056",
+      "toId": "P0059",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0056-P0060",
+      "type": "parent-child",
+      "fromId": "P0056",
+      "toId": "P0060",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0049-P0061",
+      "type": "parent-child",
+      "fromId": "P0049",
+      "toId": "P0061",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0061-P0062",
+      "type": "parent-child",
+      "fromId": "P0061",
+      "toId": "P0062",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0061-P0063",
+      "type": "parent-child",
+      "fromId": "P0061",
+      "toId": "P0063",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1,
+          2
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0063-P0064",
+      "type": "parent-child",
+      "fromId": "P0063",
+      "toId": "P0064",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          2
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0063-P0065",
+      "type": "parent-child",
+      "fromId": "P0063",
+      "toId": "P0065",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          2
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0061-P0066",
+      "type": "parent-child",
+      "fromId": "P0061",
+      "toId": "P0066",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1,
+          2
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0066-P0067",
+      "type": "parent-child",
+      "fromId": "P0066",
+      "toId": "P0067",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          2
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0066-P0068",
+      "type": "parent-child",
+      "fromId": "P0066",
+      "toId": "P0068",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          2
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0049-P0069",
+      "type": "parent-child",
+      "fromId": "P0049",
+      "toId": "P0069",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          2
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0049-P0070",
+      "type": "parent-child",
+      "fromId": "P0049",
+      "toId": "P0070",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          2
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0049-P0071",
+      "type": "parent-child",
+      "fromId": "P0049",
+      "toId": "P0071",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          2
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0049-P0072",
+      "type": "parent-child",
+      "fromId": "P0049",
+      "toId": "P0072",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          2
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0049-P0073",
+      "type": "parent-child",
+      "fromId": "P0049",
+      "toId": "P0073",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          2
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0049-P0074",
+      "type": "parent-child",
+      "fromId": "P0049",
+      "toId": "P0074",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          2
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "R-P0049-P0075",
+      "type": "parent-child",
+      "fromId": "P0049",
+      "toId": "P0075",
+      "role": "unspecified",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          2
+        ],
+        "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
+      }
+    },
+    {
+      "id": "S-P0001-P0002",
+      "type": "spouse",
+      "fromId": "P0001",
+      "toId": "P0002",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文以「＝」並列記載。"
+      }
+    },
+    {
+      "id": "S-P0007-P0008",
+      "type": "spouse",
+      "fromId": "P0007",
+      "toId": "P0008",
+      "status": "source-supported",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文以「＝」並列記載。"
+      }
+    },
+    {
+      "id": "U01",
+      "type": "possible-ancestor",
+      "fromId": "P0045",
+      "toId": "P0046",
+      "status": "pending",
+      "source": {
+        "pages": [
+          1
+        ],
+        "evidence": "原文「[第十六世推測] 葉海蝦之父輩」。"
+      },
+      "note": "僅為父輩推測，並非可確認的父親，禁止當作確定親子連線。"
+    }
+  ],
+  "reviewItems": [
+    {
+      "id": "Q01",
+      "personIds": [
+        "P0045",
+        "P0046"
+      ],
+      "text": "葉海蝦父輩與第十六世身分均待考證，與葉公名妻支系無明確血緣證據。"
+    },
+    {
+      "id": "Q02",
+      "personIds": [
+        "P0001"
+      ],
+      "text": "葉公名妻：姓名照錄；「名妻」用字與意義待確認。"
+    },
+    {
+      "id": "Q03",
+      "personIds": [
+        "P0034",
+        "P0043"
+      ],
+      "text": "「傳女」保留原文，意義待確認，不推定性別或收養。"
+    },
+    {
+      "id": "Q04",
+      "personIds": [
+        "P0069"
+      ],
+      "text": "葉進生後僅有「[第二十世] (未見續記)」，沒有姓名，不建立虛構人物。"
+    },
+    {
+      "id": "Q05",
+      "personIds": [
+        "P0002",
+        "P0008"
+      ],
+      "text": "兩位配偶沒有獨立標註世代，generation 保持 null，僅隨配偶並排。"
+    }
+  ],
+  "unparsed": [
+    {
+      "page": 2,
+      "text": "[第二十世] (未見續記)",
+      "reason": "無具名後代，不建立人物。"
+    }
+  ]
+}

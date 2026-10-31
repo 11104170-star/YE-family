@@ -1,0 +1,40 @@
+name: 驗證並部署葉氏族譜
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: 檢查 Node.js
+        run: node --version
+      - name: 驗證資料
+        run: node scripts/validate-data.mjs
+      - name: 測試資料及家族樹排列
+        run: node --test tests/*.test.js
+      - name: 建立靜態網站
+        run: node scripts/build.mjs
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 部署網站
+        id: deployment
+        uses: actions/deploy-pages@v4

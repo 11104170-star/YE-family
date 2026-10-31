@@ -1,0 +1,20 @@
+import { cp, mkdir, writeFile, readFile, rm } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+import { validateData } from '../js/dataValidator.js';
+const base = new URL('../', import.meta.url);
+const data = JSON.parse(await readFile(new URL('data/family.json', base), 'utf8'));
+const report = validateData(data);
+if (!report.valid) throw new Error(report.errors.join('\n'));
+const dist = new URL('dist/', base);
+const outputPath = path.resolve(fileURLToPath(dist));
+const projectPath = path.resolve(fileURLToPath(base));
+// 僅清除經絕對路徑確認、位於本專案內的固定建置目錄，避免殘留已移除的照片。
+if (path.dirname(outputPath) !== projectPath || path.basename(outputPath) !== 'dist') throw new Error('輸出目錄不在專案內');
+await rm(outputPath, {recursive:true, force:true});
+await mkdir(dist, {recursive:true});
+for (const name of ['index.html', 'css', 'js', 'data', 'assets']) await cp(new URL(name, base), new URL(name, dist), {recursive:true});
+await mkdir(new URL('docs/', dist), {recursive:true});
+await cp(new URL('docs/data-review.md', base), new URL('docs/data-review.md', dist));
+await writeFile(new URL('.nojekyll', dist), '');
+console.log('靜態網站已輸出至 dist/；資料驗證通過。');
