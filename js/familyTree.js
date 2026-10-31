@@ -1,5 +1,6 @@
 import { buildGraph, layoutGraph, descendants } from './layout.js';
-import { generationLabel } from './format.js';
+import { generationLabel, personDisplayName, personGenerationLabel } from './format.js';
+import { isConfirmedRelationship } from './relationships.js';
 
 export class FamilyTree {
   constructor(data, { onSelect, onBranchChange }) {
@@ -108,7 +109,7 @@ export class FamilyTree {
 
   render() {
     this.layout = layoutGraph(this.graph, { branch: this.branch, collapsed: this.collapsed, photos: this.photos });
-    const { cards, links, nodes, rowY } = this.layout;
+    const { cards, individualLinks, families, nodes, rowY } = this.layout;
     this.world.selectAll('*').remove();
     const guides = this.world.append('g').attr('aria-hidden', 'true');
     for (const [generation, y] of rowY) {
@@ -116,7 +117,7 @@ export class FamilyTree {
       guides.append('text').attr('class', 'generation-label').attr('x', 14).attr('y', y - 32).text(generationLabel(generation));
     }
     const edgeLayer = this.world.append('g').attr('aria-hidden', 'true');
-    edgeLayer.selectAll('.parent-link').data(links, r => r.id).join('path').attr('class', 'parent-link').attr('data-from', r => r.fromId).attr('data-to', r => r.toId)
+    edgeLayer.selectAll('.individual-link').data(individualLinks, r => r.id).join('path').attr('class', 'parent-link individual-link').attr('data-from', r => r.fromId).attr('data-to', r => r.toId)
       .attr('d', r => {
         const a = cards.get(r.fromId), b = cards.get(r.toId);
         const x1 = a.x + a.width / 2, y1 = a.y + a.height, x2 = b.x + b.width / 2, y2 = b.y;
@@ -124,7 +125,14 @@ export class FamilyTree {
         const mid = unit.y + unit.height + 62;
         return `M${x1},${y1}V${mid}H${x2}V${y2}`;
       });
-    const marriages = this.data.relationships.filter(r => r.type === 'spouse' && r.status === 'source-supported' && cards.has(r.fromId) && cards.has(r.toId));
+    edgeLayer.selectAll('.family-link').data(families, family => family.id).join('path')
+      .attr('class', 'parent-link family-link').attr('data-parents', family => family.parentIds.join(' ')).attr('data-children', family => family.childIds.join(' '))
+      .attr('d', family => {
+        const children = family.childIds.map(id => cards.get(id));
+        const xs = children.map(c => c.x + c.width / 2);
+        return `M${family.x},${family.y}V${family.busY}M${Math.min(family.x, ...xs)},${family.busY}H${Math.max(family.x, ...xs)}` + children.map((c, i) => `M${xs[i]},${family.busY}V${c.y}`).join('');
+      });
+    const marriages = this.data.relationships.filter(r => r.type === 'spouse' && isConfirmedRelationship(r) && cards.has(r.fromId) && cards.has(r.toId));
     edgeLayer.selectAll('.spouse-link').data(marriages).join('path').attr('class', 'spouse-link').attr('data-from', r => r.fromId).attr('data-to', r => r.toId).attr('d', (r, i) => {
       const a = cards.get(r.fromId), b = cards.get(r.toId);
       if (Math.abs(a.x - b.x) < 180) {
@@ -141,20 +149,20 @@ export class FamilyTree {
       const p = c.person;
       const fo = cardLayer.append('foreignObject').attr('class', 'node-host').attr('x', c.x).attr('y', c.y).attr('width', c.width).attr('height', c.height);
       const button = fo.append('xhtml:button').attr('type', 'button').attr('class', `person-card${p.id === this.selected ? ' selected' : ''}${p.recordType === 'ancestor-note' ? ' pending' : ''}`).attr('data-person-id', p.id)
-        .attr('aria-label', `${p.name}，${generationLabel(p.generation)}${p.recordType === 'ancestor-note' ? '，待考證' : ''}，查看詳細資料`)
+        .attr('aria-label', `${personDisplayName(p)}，${personGenerationLabel(p)}${p.recordType === 'ancestor-note' ? '，待考證' : ''}，查看詳細資料`)
         .on('click', event => { event.stopPropagation(); this.selected = p.id; this.world.selectAll('.person-card').classed('selected', function () { return this.dataset.personId === p.id; }); this.onSelect?.(p); });
       if (this.photos.has(p.id)) {
         button.append('xhtml:img').attr('src', p.photo).attr('alt', `${p.name}的照片`).attr('loading', 'lazy').attr('decoding', 'async').on('error', () => { this.photos.delete(p.id); this.render(); });
       }
       const copy = button.append('xhtml:span').attr('class', 'card-copy');
-      copy.append('xhtml:strong').attr('class', p.name.length > 5 ? 'long-name' : null).text(p.name);
-      copy.append('xhtml:small').text(p.recordType === 'ancestor-note' ? '第十六世（推測）· 待考證' : p.generation ? generationLabel(p.generation) : '配偶 · 世代未註');
+      copy.append('xhtml:strong').attr('class', personDisplayName(p).length > 5 ? 'long-name' : null).text(personDisplayName(p));
+      copy.append('xhtml:small').text(p.recordType === 'ancestor-note' ? '第十六世（推測）· 待考證' : p.generation ? personGenerationLabel(p) : '配偶 · 世代未註');
     }
     const toggles = this.world.append('g');
     for (const unit of nodes.values()) {
       if (!unit.children.length) continue;
       const isCollapsed = this.collapsed.has(unit.id);
-      const count = [...descendants(this.graph, unit.id)].reduce((sum, id) => sum + this.graph.units.get(id).people.filter(p => p.recordType === 'person').length, 0);
+      const count = [...descendants(this.graph, unit.id)].reduce((sum, id) => sum + this.graph.units.get(id).people.filter(p => p.recordType === 'person' && p.lineageRole !== 'spouse').length, 0);
       toggles.append('foreignObject').attr('x', unit.x - 22).attr('y', unit.y + unit.height + 8).attr('width', 44).attr('height', 32)
         .append('xhtml:button').attr('type', 'button').attr('class', 'collapse-button').attr('data-collapse', unit.id).attr('aria-expanded', !isCollapsed)
         .attr('aria-label', `${isCollapsed ? '展開' : '收合'}${unit.people[0].name}的後代，共 ${count} 位`)

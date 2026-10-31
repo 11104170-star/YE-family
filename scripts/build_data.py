@@ -89,6 +89,9 @@ P0075|葉門桂|19|P0049|2|(女)|
 
 
 def build():
+    existing = ROOT / 'data/family.json'
+    if existing.exists() and json.loads(existing.read_text(encoding='utf-8')).get('confirmations'):
+        raise ValueError('已有家族補充確認資料，禁止以初始 PDF 登錄表覆寫；請直接維護 family.json。')
     if hashlib.sha256(PDF.read_bytes()).hexdigest() != AUDITED_SHA256:
         raise ValueError('PDF 與本次核對版本不同，請重新人工核對登錄表，不可沿用舊關係。')
     people, relations = [], []

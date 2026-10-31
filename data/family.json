@@ -1269,7 +1269,9 @@
       "parentIds": [
         "P0049"
       ],
-      "spouseIds": [],
+      "spouseIds": [
+        "P0076"
+      ],
       "photo": null,
       "birthDate": null,
       "deathDate": null,
@@ -1282,17 +1284,22 @@
       "source": {
         "page": 1,
         "label": "葉俊良（忠雄 ）"
-      }
+      },
+      "displayName": "葉俊良（忠雄）",
+      "confirmationIds": [
+        "C20261101-01"
+      ]
     },
     {
       "id": "P0051",
       "name": "葉作榮",
       "aliases": [],
       "generation": 20,
-      "fatherId": null,
-      "motherId": null,
+      "fatherId": "P0050",
+      "motherId": "P0076",
       "parentIds": [
-        "P0050"
+        "P0050",
+        "P0076"
       ],
       "spouseIds": [],
       "photo": null,
@@ -1307,7 +1314,10 @@
       "source": {
         "page": 1,
         "label": "葉作榮"
-      }
+      },
+      "confirmationIds": [
+        "C20261101-01"
+      ]
     },
     {
       "id": "P0052",
@@ -1341,10 +1351,11 @@
         "崑利"
       ],
       "generation": 20,
-      "fatherId": null,
-      "motherId": null,
+      "fatherId": "P0050",
+      "motherId": "P0076",
       "parentIds": [
-        "P0050"
+        "P0050",
+        "P0076"
       ],
       "spouseIds": [],
       "photo": null,
@@ -1359,7 +1370,11 @@
       "source": {
         "page": 1,
         "label": "葉峻宏（崑利）"
-      }
+      },
+      "confirmationIds": [
+        "C20261101-01"
+      ],
+      "displayName": "葉峻宏（崑利）"
     },
     {
       "id": "P0054",
@@ -1391,10 +1406,11 @@
       "name": "葉姿昀",
       "aliases": [],
       "generation": 20,
-      "fatherId": null,
-      "motherId": null,
+      "fatherId": "P0050",
+      "motherId": "P0076",
       "parentIds": [
-        "P0050"
+        "P0050",
+        "P0076"
       ],
       "spouseIds": [],
       "photo": null,
@@ -1409,7 +1425,10 @@
       "source": {
         "page": 1,
         "label": "葉姿昀(女)；原文姓名前有「、」。"
-      }
+      },
+      "confirmationIds": [
+        "C20261101-01"
+      ]
     },
     {
       "id": "P0056",
@@ -1910,6 +1929,37 @@
         "page": 2,
         "label": "葉門桂(女)"
       }
+    },
+    {
+      "id": "P0076",
+      "name": "吳秀英",
+      "aliases": [],
+      "generation": 19,
+      "fatherId": null,
+      "motherId": null,
+      "parentIds": [],
+      "spouseIds": [
+        "P0050"
+      ],
+      "photo": null,
+      "birthDate": null,
+      "deathDate": null,
+      "biography": "",
+      "notes": "葉俊良（忠雄）的妻子；葉作榮、葉峻宏（崑利）、葉姿昀的母親。",
+      "gender": "female",
+      "branchId": "B02",
+      "recordType": "person",
+      "generationStatus": "family-confirmed",
+      "lineageRole": "spouse",
+      "source": {
+        "type": "family-confirmation",
+        "confirmationId": "C20261101-01",
+        "date": "2026-11-01",
+        "evidence": "家族使用者明確確認：吳秀英為葉俊良（忠雄）的妻子，屬第十九世配偶；葉作榮、葉峻宏（崑利）、葉姿昀為兩人的親生子女。出生日期、過世日期未知，暫無照片。"
+      },
+      "confirmationIds": [
+        "C20261101-01"
+      ]
     }
   ],
   "relationships": [
@@ -2548,14 +2598,18 @@
       "type": "parent-child",
       "fromId": "P0050",
       "toId": "P0051",
-      "role": "unspecified",
+      "role": "father",
       "status": "source-supported",
       "source": {
         "pages": [
           1
         ],
         "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
-      }
+      },
+      "parentage": "biological",
+      "confirmationIds": [
+        "C20261101-01"
+      ]
     },
     {
       "id": "R-P0051-P0052",
@@ -2576,14 +2630,18 @@
       "type": "parent-child",
       "fromId": "P0050",
       "toId": "P0053",
-      "role": "unspecified",
+      "role": "father",
       "status": "source-supported",
       "source": {
         "pages": [
           1
         ],
         "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
-      }
+      },
+      "parentage": "biological",
+      "confirmationIds": [
+        "C20261101-01"
+      ]
     },
     {
       "id": "R-P0053-P0054",
@@ -2604,14 +2662,18 @@
       "type": "parent-child",
       "fromId": "P0050",
       "toId": "P0055",
-      "role": "unspecified",
+      "role": "father",
       "status": "source-supported",
       "source": {
         "pages": [
           1
         ],
         "evidence": "原文樹狀縮排／連線及相鄰世代；未註明父母角色。"
-      }
+      },
+      "parentage": "biological",
+      "confirmationIds": [
+        "C20261101-01"
+      ]
     },
     {
       "id": "R-P0049-P0056",
@@ -2934,6 +2996,64 @@
         "evidence": "原文「[第十六世推測] 葉海蝦之父輩」。"
       },
       "note": "僅為父輩推測，並非可確認的父親，禁止當作確定親子連線。"
+    },
+    {
+      "id": "R-P0076-P0051",
+      "type": "parent-child",
+      "fromId": "P0076",
+      "toId": "P0051",
+      "role": "mother",
+      "parentage": "biological",
+      "status": "user-confirmed",
+      "source": {
+        "type": "family-confirmation",
+        "confirmationId": "C20261101-01",
+        "date": "2026-11-01",
+        "evidence": "家族使用者明確確認：吳秀英為葉俊良（忠雄）的妻子，屬第十九世配偶；葉作榮、葉峻宏（崑利）、葉姿昀為兩人的親生子女。出生日期、過世日期未知，暫無照片。"
+      }
+    },
+    {
+      "id": "R-P0076-P0053",
+      "type": "parent-child",
+      "fromId": "P0076",
+      "toId": "P0053",
+      "role": "mother",
+      "parentage": "biological",
+      "status": "user-confirmed",
+      "source": {
+        "type": "family-confirmation",
+        "confirmationId": "C20261101-01",
+        "date": "2026-11-01",
+        "evidence": "家族使用者明確確認：吳秀英為葉俊良（忠雄）的妻子，屬第十九世配偶；葉作榮、葉峻宏（崑利）、葉姿昀為兩人的親生子女。出生日期、過世日期未知，暫無照片。"
+      }
+    },
+    {
+      "id": "R-P0076-P0055",
+      "type": "parent-child",
+      "fromId": "P0076",
+      "toId": "P0055",
+      "role": "mother",
+      "parentage": "biological",
+      "status": "user-confirmed",
+      "source": {
+        "type": "family-confirmation",
+        "confirmationId": "C20261101-01",
+        "date": "2026-11-01",
+        "evidence": "家族使用者明確確認：吳秀英為葉俊良（忠雄）的妻子，屬第十九世配偶；葉作榮、葉峻宏（崑利）、葉姿昀為兩人的親生子女。出生日期、過世日期未知，暫無照片。"
+      }
+    },
+    {
+      "id": "S-P0050-P0076",
+      "type": "spouse",
+      "fromId": "P0050",
+      "toId": "P0076",
+      "status": "user-confirmed",
+      "source": {
+        "type": "family-confirmation",
+        "confirmationId": "C20261101-01",
+        "date": "2026-11-01",
+        "evidence": "家族使用者明確確認：吳秀英為葉俊良（忠雄）的妻子，屬第十九世配偶；葉作榮、葉峻宏（崑利）、葉姿昀為兩人的親生子女。出生日期、過世日期未知，暫無照片。"
+      }
     }
   ],
   "reviewItems": [
@@ -2981,6 +3101,21 @@
       "page": 2,
       "text": "[第二十世] (未見續記)",
       "reason": "無具名後代，不建立人物。"
+    }
+  ],
+  "confirmations": [
+    {
+      "id": "C20261101-01",
+      "date": "2026-11-01",
+      "type": "family-confirmation",
+      "personIds": [
+        "P0050",
+        "P0076",
+        "P0051",
+        "P0053",
+        "P0055"
+      ],
+      "evidence": "家族使用者明確確認：吳秀英為葉俊良（忠雄）的妻子，屬第十九世配偶；葉作榮、葉峻宏（崑利）、葉姿昀為兩人的親生子女。出生日期、過世日期未知，暫無照片。"
     }
   ]
 }

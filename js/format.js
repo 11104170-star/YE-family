@@ -10,3 +10,6 @@ export function element(tag, className, text) {
   if (text !== undefined) el.textContent = text;
   return el;
 }
+
+export const personDisplayName = person => person.displayName || person.name;
+export const personGenerationLabel = person => `${generationLabel(person.generation)}${person.lineageRole === 'spouse' ? '配偶' : ''}`;

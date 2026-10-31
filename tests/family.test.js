@@ -4,16 +4,17 @@ import { readFile } from 'node:fs/promises';
 import { validateData } from '../js/dataValidator.js';
 import { buildGraph, layoutGraph, descendants } from '../js/layout.js';
 import { searchPeople } from '../js/search.js';
+import { personGenerationLabel } from '../js/format.js';
 const data = JSON.parse(await readFile(new URL('../data/family.json', import.meta.url), 'utf8'));
 const clone = () => structuredClone(data);
 const graph = buildGraph(data);
 
-test('兩頁登錄完整，統計不把推測父輩視為具名人物', () => {
-  assert.equal(data.people.length, 75);
-  assert.equal(data.people.filter(p => p.recordType === 'person').length, 74);
+test('保留兩頁登錄並納入家族補充，不把推測父輩視為具名人物', () => {
+  assert.equal(data.people.length, 76);
+  assert.equal(data.people.filter(p => p.recordType === 'person').length, 75);
   assert.deepEqual(validateData(data), {valid:true, errors:[], warnings:[]});
-  assert.equal(data.relationships.filter(r => r.type === 'parent-child').length, 70);
-  assert.equal(data.relationships.filter(r => r.type === 'spouse').length, 2);
+  assert.equal(data.relationships.filter(r => r.type === 'parent-child').length, 73);
+  assert.equal(data.relationships.filter(r => r.type === 'spouse').length, 3);
 });
 test('跨頁、跨行與並列人物依原始層級建連線', () => {
   const parents = id => data.people.find(p => p.id === id).parentIds;
@@ -80,12 +81,12 @@ test('收合不改動原始關係，展開可恢復全部人物', () => {
   const layout = layoutGraph(graph, { collapsed: new Set(['P0007']) });
   assert.ok(!layout.cards.has('P0009')); assert.ok(layout.cards.has('P0003'));
   assert.equal(JSON.stringify(data), original);
-  assert.equal(layoutGraph(graph).cards.size, 75);
+  assert.equal(layoutGraph(graph).cards.size, 76);
   assert.ok(descendants(graph, 'P0007').has('P0044'));
 });
 test('支系切換保持推測記載獨立、不產生跨支系邊', () => {
   const layout = layoutGraph(graph, {branch:'B02'});
-  assert.equal(layout.cards.size, 31);
+  assert.equal(layout.cards.size, 32);
   assert.ok(!layout.links.some(r => r.fromId === 'P0045'));
   assert.ok([...layout.cards.values()].every(c => c.person.branchId === 'B02'));
 });
@@ -105,7 +106,74 @@ test('多位配偶、雙親、女性上代與未知上代均不複製或錯配�
   b.gender='female'; c.parentIds.push(b.id); c.motherId=b.id;
   synthetic.relationships.push({id:'both',type:'parent-child',fromId:b.id,toId:c.id,status:'source-supported',source:{pages:[1],evidence:'測試'}});
   const layout = layoutGraph(buildGraph(synthetic));
-  assert.equal(layout.cards.size,76); noOverlap(layout);
+  assert.equal(layout.cards.size,77); noOverlap(layout);
   assert.ok(layout.links.some(r=>r.fromId===b.id && r.toId===c.id));
   assert.ok(!layout.links.some(r=>r.fromId===extra.id && r.toId===c.id));
+});
+
+test('吳秀英為獨立的第十九世配偶，未知日期與照片不補造', () => {
+  const matches = searchPeople(data.people, '吳秀英');
+  assert.equal(matches.length, 1);
+  const mother = matches[0];
+  assert.equal(mother.id, 'P0076');
+  assert.equal(mother.generation, 19);
+  assert.equal(mother.lineageRole, 'spouse');
+  assert.equal(personGenerationLabel(mother), '第十九世配偶');
+  assert.deepEqual(mother.parentIds, []);
+  assert.equal(mother.fatherId, null); assert.equal(mother.motherId, null);
+  assert.deepEqual(mother.spouseIds, ['P0050']);
+  assert.deepEqual(graph.people.get('P0050').spouseIds, ['P0076']);
+  for (const field of ['birthDate', 'deathDate', 'photo']) assert.equal(mother[field], null);
+  assert.equal(mother.source.type, 'family-confirmation');
+  assert.equal(mother.source.page, undefined);
+});
+
+test('三名既有子女的父母與親生關係一致，保留各自後代', () => {
+  for (const id of ['P0051','P0053','P0055']) {
+    const child = graph.people.get(id);
+    assert.equal(child.fatherId, 'P0050'); assert.equal(child.motherId, 'P0076');
+    assert.deepEqual(child.parentIds, ['P0050','P0076']);
+    assert.equal(child.generation, 20);
+    const edges = data.relationships.filter(r=>r.type==='parent-child' && r.toId===id);
+    assert.equal(edges.length,2);
+    assert.ok(edges.every(r=>r.parentage==='biological'));
+    assert.equal(edges.find(r=>r.role==='mother').status,'user-confirmed');
+  }
+  assert.deepEqual(graph.people.get('P0052').parentIds, ['P0051']);
+  assert.deepEqual(graph.people.get('P0054').parentIds, ['P0053']);
+});
+
+test('夫妻共用一條分支連接三名子女，不將其他配偶推定為母親', () => {
+  const layout = layoutGraph(graph);
+  assert.equal(layout.families.length,1);
+  const family = layout.families[0];
+  assert.deepEqual(family.parentIds,['P0050','P0076']);
+  assert.deepEqual(family.childIds,['P0051','P0053','P0055']);
+  assert.equal(layout.cards.get('P0050').y,layout.cards.get('P0076').y);
+  assert.ok(family.x > layout.cards.get('P0050').x + 156);
+  assert.ok(family.x < layout.cards.get('P0076').x);
+  assert.ok(!layout.individualLinks.some(r=>family.childIds.includes(r.toId)));
+  assert.ok(!graph.parentEdges.some(r=>r.toId==='P0076'));
+  assert.ok(!layout.families.some(f=>f.parentIds.includes('P0002')||f.parentIds.includes('P0008')));
+});
+
+test('新夫妻分支可收合恢復，照片高低不同時仍正確連接', () => {
+  const collapsed = layoutGraph(graph,{collapsed:new Set(['P0050'])});
+  assert.ok(collapsed.cards.has('P0076'));
+  assert.ok(!collapsed.cards.has('P0051'));
+  assert.equal(collapsed.families.length,0);
+  const expanded = layoutGraph(graph,{photos:new Set(['P0076'])});
+  noOverlap(expanded);
+  assert.equal(expanded.families.length,1);
+  const f=expanded.families[0];
+  assert.ok(f.busY > expanded.cards.get('P0076').y + expanded.cards.get('P0076').height);
+  assert.ok(f.busY < expanded.cards.get('P0051').y);
+});
+
+test('家族確認必須有有效證據，父母欄位不得與關係角色矛盾', () => {
+  let changed=clone();
+  changed.relationships.find(r=>r.id==='R-P0076-P0051').source={};
+  assert.ok(validateData(changed).errors.some(e=>e.includes('家族確認來源')));
+  changed=clone(); changed.people.find(p=>p.id==='P0051').fatherId='P0076';
+  assert.ok(validateData(changed).errors.some(e=>e.includes('父親角色')));
 });

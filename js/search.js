@@ -1,4 +1,4 @@
-import { element, generationLabel } from './format.js';
+import { element, personGenerationLabel } from './format.js';
 const normalize = value => value.normalize('NFKC').trim().toLocaleLowerCase('zh-Hant');
 
 export function searchPeople(people, query) {
@@ -22,7 +22,7 @@ export function initSearch(data, onSelect) {
       button.id = `result-${p.id}`; button.type = 'button'; button.setAttribute('role', 'option'); button.setAttribute('aria-selected', 'false');
       const branch = data.branches.find(b => b.id === p.branchId);
       const parent = data.people.find(parent => p.parentIds.includes(parent.id));
-      button.append(element('span', '', `${generationLabel(p.generation)} · ${branch?.name} · ${parent ? `上代 ${parent.name} · ` : ''}${p.aliases.length ? `別名 ${p.aliases.join('、')} · ` : ''}${p.id}`));
+      button.append(element('span', '', `${personGenerationLabel(p)} · ${branch?.name} · ${parent ? `上代 ${parent.name} · ` : ''}${p.aliases.length ? `別名 ${p.aliases.join('、')} · ` : ''}${p.id}`));
       button.addEventListener('click', () => select(matches[index])); list.append(button);
     }
     if (!matches.length) list.append(element('p', 'search-empty', '沒有找到符合的人物，請試試別名或部分姓名。'));

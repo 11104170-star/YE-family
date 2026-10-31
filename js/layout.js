@@ -1,13 +1,15 @@
+import { isConfirmedRelationship } from './relationships.js';
+
 export const CARD_WIDTH = 156;
 export const CARD_GAP = 18;
 
-/** 配偶群只決定位置；親子連線始終使用原始個別人物，絕不由配偶推定共同子女。 */
+/** 配偶群決定位置；只有明確記錄雙親的子女，才從同一夫妻連接點接出。 */
 export function buildGraph(data) {
   const people = new Map(data.people.map(p => [p.id, p]));
   const leaders = new Map(data.people.map(p => [p.id, p.id]));
   const find = id => leaders.get(id) === id ? id : find(leaders.get(id));
   for (const r of data.relationships) {
-    if (r.type === 'spouse' && r.status === 'source-supported') leaders.set(find(r.toId), find(r.fromId));
+    if (r.type === 'spouse' && isConfirmedRelationship(r)) leaders.set(find(r.toId), find(r.fromId));
   }
   const units = new Map(), personUnit = new Map();
   for (const p of data.people) {
@@ -15,7 +17,8 @@ export function buildGraph(data) {
     if (!units.has(id)) units.set(id, { id, people: [], children: [], parents: [] });
     units.get(id).people.push(p); personUnit.set(p.id, id);
   }
-  const parentEdges = data.relationships.filter(r => r.type === 'parent-child' && r.status === 'source-supported');
+  const parentEdges = data.relationships.filter(r => r.type === 'parent-child' && isConfirmedRelationship(r));
+  const spousePairs = new Set(data.relationships.filter(r => r.type === 'spouse' && isConfirmedRelationship(r)).map(r => [r.fromId, r.toId].sort().join(':')));
   for (const r of parentEdges) {
     const a = units.get(personUnit.get(r.fromId)), b = units.get(personUnit.get(r.toId));
     if (a.id === b.id) throw new Error('親子與配偶群衝突');
@@ -27,7 +30,7 @@ export function buildGraph(data) {
     u.generation = u.people.find(p => p.generation)?.generation || minGeneration;
     u.width = u.people.length * CARD_WIDTH + (u.people.length - 1) * CARD_GAP;
   }
-  return { people, units, personUnit, parentEdges, minGeneration };
+  return { people, units, personUnit, parentEdges, spousePairs, minGeneration };
 }
 
 export function descendants(graph, id) {
@@ -87,5 +90,28 @@ export function layoutGraph(graph, { branch = 'all', collapsed = new Set(), phot
     y: n.y, width: CARD_WIDTH, height: photos.has(p.id) ? 168 : 80,
   }));
   const links = graph.parentEdges.filter(r => cards.has(r.fromId) && cards.has(r.toId) && !collapsed.has(graph.personUnit.get(r.fromId)));
-  return { nodes, cards, links, rowY, width: Math.max(left - 92, 360), height: Math.max(cursorY - 60, 280) };
+  const families = new Map(), groupedEdges = new Set();
+  const childEdges = new Map();
+  for (const edge of links) {
+    if (!childEdges.has(edge.toId)) childEdges.set(edge.toId, []);
+    childEdges.get(edge.toId).push(edge);
+  }
+  for (const [childId, edges] of childEdges) {
+    // 不能僅因上代有配偶就推定另一位家長；必須已有兩條獨立親子證據。
+    if (edges.length !== 2) continue;
+    const parentIds = edges.map(e => e.fromId).sort(), key = parentIds.join(':');
+    if (!graph.spousePairs.has(key)) continue;
+    const [left, right] = parentIds.map(id => cards.get(id)).sort((a, b) => a.x - b.x);
+    if (left.unitId !== right.unitId || Math.abs(right.x - left.x - CARD_WIDTH - CARD_GAP) > .01) continue;
+    if (!families.has(key)) {
+      const unit = nodes.get(left.unitId);
+      families.set(key, { id: key, parentIds, childIds: [],
+        x: (left.x + left.width + right.x) / 2,
+        y: left.y + Math.min(left.height, right.height) / 2,
+        busY: unit.y + unit.height + 62 });
+    }
+    families.get(key).childIds.push(childId);
+    edges.forEach(edge => groupedEdges.add(edge.id));
+  }
+  return { nodes, cards, links, families: [...families.values()], individualLinks: links.filter(r => !groupedEdges.has(r.id)), rowY, width: Math.max(left - 92, 360), height: Math.max(cursorY - 60, 280) };
 }

@@ -25,7 +25,7 @@ node scripts/serve.mjs
 
 ## 資料與考證
 
-已完整核對兩頁原始 PDF，共 **74 位具名人物 + 1 筆推測父輩記載**、2 個獨立支系、70 條原文親子關係、2 組夫妻、1 項待考證祖先關係。詳見 [資料檢查報告](docs/data-review.md)。
+已完整核對兩頁原始 PDF，並依家族補充新增吳秀英及其親子關係。目前共 **75 位具名人物 + 1 筆推測父輩記載**、2 個獨立支系、73 條親子關係（PDF 70 + 家族補充 3）、3 組夫妻、1 項待考證祖先關係。吳秀英為第十九世配偶；葉作榮、葉峻宏、葉姿昀的 fatherId 為 P0050、motherId 為 P0076。詳見 [資料檢查報告](docs/data-review.md)。
 
 `data/family.json` 為網站唯一執行時資料來源。每人固定使用 P0001 等 ID，**姓名不能作唯一鍵，同名也不能合併**。欄位包括使用者要求的 id、name、aliases、generation、fatherId、motherId、spouseIds、photo、birthDate、deathDate、biography、notes，並增加：
 
@@ -34,17 +34,19 @@ node scripts/serve.mjs
 | parentIds | 原文明確上代，尚未註明父／母角色時使用 |
 | branchId | 獨立支系 |
 | recordType | person 具名人物；ancestor-note 推測父輩記載 |
-| generationStatus | explicit / unknown / inferred |
+| generationStatus | explicit / unknown / inferred / family-confirmed |
+| lineageRole | spouse 表示配偶身分，不表示葉氏血緣後代 |
+| confirmationIds | 家族補充確認紀錄的 ID |
 | source | 原始頁碼與標籤 |
 | reviewNotes | 顯示給讀者的待考證說明 |
 
-`relationships` 將親子、配偶與推測祖先分開記錄，每條保留 `id`、`type`、`fromId`、`toId`、`status`、`source.pages`、`source.evidence`。`source-supported` 僅指 PDF 支持該記載，不代表外部血緣已查證；`pending` 的 `possible-ancestor` 不參與親子排版。`reviewItems` 與 `unparsed` 保留尚待釐清事項。
+`relationships` 將親子、配偶與推測祖先分開記錄，每條保留 `id`、`type`、`fromId`、`toId`、`status` 與來源證據。`source-supported` 僅指 PDF 支持該記載，不代表外部血緣已查證；`user-confirmed` 為家族明確確認，source 記錄 type、confirmationId、date、evidence，不使用虛構頁碼。頂層 `confirmations` 保留補充確認內容。`pending` 的 `possible-ancestor` 不參與親子排版。`reviewItems` 與 `unparsed` 保留尚待釐清事項。
 
 父母角色未知時，`fatherId`、`motherId` 為 null，介面顯示「上代」。確認父／母角色後，可同時填入對應欄位與 parentIds，並在親子關係註明來源；不要因名字、配偶或「傳女」字樣就補定角色或性別。
 
 新增人物只需編輯 JSON：使用未被使用的新 ID，加入支系，更新 parentIds／spouseIds 與相應關係、證據；夫妻引用須雙向。未知用 null、空字串或空陣列；待考證祖先只能放在 pending 關係，不能填入 parentIds。保留既有人物 ID。不同出生世代的配偶關係需人工確認並擴充模型，不可調整史料迎合排版。
 
-`scripts/build_data.py` 是本次原始 PDF 的人工核對登錄表，保留固定 ID 及來源 SHA-256。重新執行會重建初始資料，**會覆蓋 family.json 後來的修改**；日常維護直接修改 JSON，不需要重跑它。
+`scripts/build_data.py` 是原始 PDF 的人工核對登錄表，保留固定 ID 及來源 SHA-256。有家族補充資料時會拒絕覆寫，以保護後續確認；日常維護直接修改 JSON，不需要重跑它。
 
 ## 照片
 
@@ -95,4 +97,4 @@ docs/data-review.md          資料檢查報告
 tests/family.test.js         資料與排版回歸測試
 ```
 
-唯一瀏覽器函式庫為 [D3.js](https://d3js.org/getting-started)，已本地保存 7.9.0 與授權檔；無 npm 執行依賴。渲染以 SVG 親屬線與 HTML 人物卡組成，配偶群僅用於定位，子女連線只依實際原文人物邊，不從配偶關係推定共同親子。多位配偶與共享子女維持單一人物卡，排版所選主上代不改寫任何原始親屬邊。
+唯一瀏覽器函式庫為 [D3.js](https://d3js.org/getting-started)，已本地保存 7.9.0 與授權檔；無 npm 執行依賴。渲染以 SVG 親屬線與 HTML 人物卡組成，子女連線依實際原文或家族確認的親子證據；雙親及婚姻均確認時，從夫妻間的同一連接點接出共同子女，不從配偶關係推定未知親子。多位配偶與共享子女維持單一人物卡，排版所選主上代不改寫任何原始親屬邊。
