@@ -1,0 +1,16 @@
+/* 敬祖牌位與象徵線屬展示層，和實線親屬連接保持明確區別。 */
+.memorial-tablet{fill:#203c32;stroke:#bda16b;stroke-width:1.5;filter:drop-shadow(0 4px 5px #1d38241c)}
+.memorial-frame{fill:none;stroke:#bda16b;stroke-width:.8;opacity:.8}
+.memorial-base{fill:#a68d59}
+.memorial-node text{text-anchor:middle;pointer-events:none}
+.memorial-inscription{font-family:var(--serif);font-size:11px;letter-spacing:4px;fill:#cdb886}
+.memorial-title{font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:2px;fill:#f6e9c5}
+.memorial-caption{font-family:var(--sans);font-size:11px;letter-spacing:2px;fill:#cfbd91}
+.memorial-rule{fill:none;stroke:#a9905d;stroke-width:.8}
+.memorial-link{fill:none;stroke:#a68d59;stroke-width:1.4;stroke-dasharray:5 6}
+.memorial-note rect{fill:#f7f8f2}
+.memorial-note text{font-family:var(--sans);font-size:12px;letter-spacing:1px;text-anchor:middle;fill:#8b784e}
+.memorial-branch-label rect{fill:#f5f1e4;stroke:#d8ccb0;stroke-width:1}
+.memorial-branch-label text{font-family:var(--sans);font-size:12px;text-anchor:middle;fill:#7a6c4b}
+.line-sample.symbolic{border-top:2px dashed #a68d59}
+@media(min-width:681px){.tree-stage{height:clamp(560px,72dvh,720px)}}

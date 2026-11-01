@@ -1,4 +1,5 @@
 import { isConfirmedRelationship } from './relationships.js';
+import { MEMORIAL_BAND_HEIGHT, createMemorialLayout } from './memorial.js';
 
 export const CARD_WIDTH = 156;
 export const CARD_GAP = 18;
@@ -30,7 +31,7 @@ export function buildGraph(data) {
     u.generation = u.people.find(p => p.generation)?.generation || minGeneration;
     u.width = u.people.length * CARD_WIDTH + (u.people.length - 1) * CARD_GAP;
   }
-  return { people, units, personUnit, parentEdges, spousePairs, minGeneration };
+  return { people, units, personUnit, parentEdges, spousePairs, minGeneration, branches: data.branches };
 }
 
 export function descendants(graph, id) {
@@ -70,7 +71,7 @@ export function layoutGraph(graph, { branch = 'all', collapsed = new Set(), phot
   }
   layoutRoots.forEach(n => measure(n.id));
   const generations = [...new Set([...nodes.values()].map(n => n.generation))].sort((a, b) => a - b);
-  const rowY = new Map(); let cursorY = 64;
+  const rowY = new Map(); let cursorY = 64 + MEMORIAL_BAND_HEIGHT;
   for (const g of generations) {
     rowY.set(g, cursorY);
     cursorY += Math.max(...[...nodes.values()].filter(n => n.generation === g).map(n => n.height)) + 108;
@@ -113,5 +114,6 @@ export function layoutGraph(graph, { branch = 'all', collapsed = new Set(), phot
     families.get(key).childIds.push(childId);
     edges.forEach(edge => groupedEdges.add(edge.id));
   }
-  return { nodes, cards, links, families: [...families.values()], individualLinks: links.filter(r => !groupedEdges.has(r.id)), rowY, width: Math.max(left - 92, 360), height: Math.max(cursorY - 60, 280) };
+  const memorial = createMemorialLayout(cards, graph.branches);
+  return { nodes, cards, links, memorial, families: [...families.values()], individualLinks: links.filter(r => !groupedEdges.has(r.id)), rowY, width: Math.max(left - 92, 360), height: Math.max(cursorY - 60, 280) };
 }

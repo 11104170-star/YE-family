@@ -5,6 +5,7 @@ import { validateData } from '../js/dataValidator.js';
 import { buildGraph, layoutGraph, descendants } from '../js/layout.js';
 import { searchPeople } from '../js/search.js';
 import { personGenerationLabel } from '../js/format.js';
+import { MEMORIAL_BAND_HEIGHT } from '../js/memorial.js';
 const data = JSON.parse(await readFile(new URL('../data/family.json', import.meta.url), 'utf8'));
 const clone = () => structuredClone(data);
 const graph = buildGraph(data);
@@ -176,4 +177,47 @@ test('家族確認必須有有效證據，父母欄位不得與關係角色矛�
   assert.ok(validateData(changed).errors.some(e=>e.includes('家族確認來源')));
   changed=clone(); changed.people.find(p=>p.id==='P0051').fatherId='P0076';
   assert.ok(validateData(changed).errors.some(e=>e.includes('父親角色')));
+});
+
+test('敬祖牌位置於所有記載上方並依整張樹的可見範圍置中', () => {
+  const layout=layoutGraph(graph);
+  const cards=[...layout.cards.values()], memorial=layout.memorial;
+  assert.equal(memorial.label,'堂上歷代始高曾祖');
+  assert.equal(memorial.type,'memorial');
+  assert.equal(memorial.centerX,(Math.min(...cards.map(c=>c.x))+Math.max(...cards.map(c=>c.x+c.width)))/2);
+  assert.ok(memorial.y+memorial.height < Math.min(...cards.map(c=>c.y)));
+  assert.equal(Math.min(...layout.rowY.values()),64+MEMORIAL_BAND_HEIGHT);
+  assert.deepEqual(memorial.branches.map(b=>b.branchId),['B01','B02']);
+  for (const branch of memorial.branches) {
+    assert.equal(branch.kind,'symbolic');
+    assert.ok(branch.y+branch.height < Math.min(...cards.map(c=>c.y)));
+    assert.equal(branch.fromId,undefined); assert.equal(branch.toId,undefined);
+  }
+});
+
+test('敬祖展示不加入人物、搜尋、世代及親屬關係', () => {
+  const before=JSON.stringify(data);
+  const layout=layoutGraph(graph);
+  assert.equal(layout.cards.size,76);
+  assert.equal(layout.nodes.size,graph.units.size);
+  assert.equal(graph.parentEdges.length,73);
+  assert.equal(data.people.filter(p=>p.recordType==='person').length,75);
+  assert.equal(searchPeople(data.people,'堂上歷代始高曾祖').length,0);
+  assert.equal(layout.memorial.generation,undefined);
+  assert.equal(layout.memorial.photo,undefined);
+  assert.equal(layout.memorial.birthDate,undefined);
+  assert.equal(layout.memorial.fatherId,undefined);
+  assert.equal(layout.memorial.motherId,undefined);
+  assert.equal(JSON.stringify(data),before);
+});
+
+test('切換支系、收合與不同照片高度後仍保留單一敬祖節點', () => {
+  for (const branch of ['B01','B02','all']) {
+    const collapsed=new Set([...graph.units.values()].filter(u=>u.children.length).map(u=>u.id));
+    const layout=layoutGraph(graph,{branch,collapsed,photos:new Set(['P0001','P0046'])});
+    assert.equal(layout.memorial.branches.length,branch==='all'?2:1);
+    assert.ok(layout.memorial.connectionLabel.includes('非血緣'));
+    assert.ok(layout.memorial.y+layout.memorial.height<Math.min(...[...layout.cards.values()].map(c=>c.y)));
+    noOverlap(layout);
+  }
 });

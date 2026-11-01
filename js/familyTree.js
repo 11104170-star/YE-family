@@ -1,6 +1,7 @@
 import { buildGraph, layoutGraph, descendants } from './layout.js';
 import { generationLabel, personDisplayName, personGenerationLabel } from './format.js';
 import { isConfirmedRelationship } from './relationships.js';
+import { renderMemorial } from './memorial.js';
 
 export class FamilyTree {
   constructor(data, { onSelect, onBranchChange }) {
@@ -101,8 +102,8 @@ export class FamilyTree {
     let x = (width - this.layout.width * scale) / 2, y = (height - this.layout.height * scale) / 2;
     if (defaultView && width < 650) {
       scale = .78;
-      const root = [...this.layout.nodes.values()].find(n => n.people.some(p => p.recordType === 'person'));
-      x = width / 2 - root.x * scale; y = 24 - root.y * scale;
+      x = width / 2 - this.layout.memorial.centerX * scale;
+      y = 16 - this.layout.memorial.y * scale;
     }
     this.svg.call(this.zoom.transform, d3.zoomIdentity.translate(x, y).scale(scale));
   }
@@ -111,6 +112,7 @@ export class FamilyTree {
     this.layout = layoutGraph(this.graph, { branch: this.branch, collapsed: this.collapsed, photos: this.photos });
     const { cards, individualLinks, families, nodes, rowY } = this.layout;
     this.world.selectAll('*').remove();
+    renderMemorial(this.world, this.layout.memorial);
     const guides = this.world.append('g').attr('aria-hidden', 'true');
     for (const [generation, y] of rowY) {
       guides.append('line').attr('class', 'generation-rule').attr('x1', 10).attr('x2', this.layout.width - 20).attr('y1', y - 23).attr('y2', y - 23);
